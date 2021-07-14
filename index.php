@@ -7,15 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Setayesh - Index</title>
     <link href="pack/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="pack/main.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Harmattan&display=swap');
-
-        body {
-            padding: 7%;
-            font-family: 'Harmattan', sans-serif;
-        }
-    </style>
 </head>
 <body dir="rtl">
 <div>
