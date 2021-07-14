@@ -4,3 +4,100 @@ body {
     padding: 7%;
     font-family: 'Harmattan', sans-serif;
 }
+
+.part {
+    box-shadow:  20px 20px 65px #d9d9d9, -20px -20px 65px #f1f1f1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.phead {
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 5%;
+    border: solid 1px #ff70f8;
+    background-color: #ff70f8;
+}
+
+.pbody {
+    padding: 5%;
+    color: purple;
+    border: solid 1px #ff70f8;
+    border-bottom-color: #ff70f8;
+}
+
+.pfooter {
+    padding: 5%;
+    color: purple;
+    border-top-color: #ff70f8;
+    border: solid 1px #ff70f8;
+}
+
+.post {
+    box-shadow:  20px 20px 65px #d9d9d9, -20px -20px 65px #f1f1f1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.posthead {
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 5%;
+    border: solid 1px #70a7ff;
+    background-color: #70a7ff;
+}
+
+.postbody {
+    padding: 5%;
+    color: #70a7ff;
+    border: solid 1px #70a7ff;
+    border-bottom-color: #70a7ff;
+}
+
+.postfooter {
+    padding: 2%;
+    text-align: left;
+    color: #70a7ff;
+    border: solid 1px #70a7ff;
+}
+
+.line {
+    color: #ff70f8;
+}
+
+.inp {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border: solid 1px #a3a3a3;
+    font-weight: 400;
+    color: #212529;
+    background-color: #fff;
+    border-radius: .25rem;
+}
+
+.bttn {
+    width: 100%;
+    padding: .375rem .75rem;
+    background: #ff70f8;
+    color: white;
+    border-radius: 5px;
+    border: solid 1px #ff70f8;
+}
+
+.bg-custom {
+    background: #ff70b0;
+}
+
+.mul {
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
