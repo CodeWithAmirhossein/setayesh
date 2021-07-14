@@ -12,7 +12,12 @@
 </head>
 <body dir="rtl">
 <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="con">
+        <div class="star star1"></div>
+        <div class="star star2"></div>
+        <div class="star star3"></div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-custom fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="."><i class="fa fa-bank"></i> هنرستان آفرینش</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -54,81 +59,82 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="text-center">
-                    <div class="card border-danger">
-                        <div class="card-header border-danger">
-                            Search
+                    <div class="part">
+                        <div class="phead">
+                            جستجو
                         </div>
-                        <div class="card-body">
+                        <div class="pbody">
                             <form action="index.php">
-                                <div class="input-group mb-3">
-                                    <input type="text" class="form-control border-danger" placeholder="Search">
-                                    <button class="btn btn-danger" type="button">Search</button>
+                                <div class="">
+                                    <input type="text" class="inp" placeholder="جستجو">
+                                    <br>
+                                    <button class="bttn" type="button">جستجو کن</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <br>
-                    <div class="card border-danger">
-                        <div class="card-header border-danger">
-                            Sites related
+                    <div class="part">
+                        <div class="phead">
+                            سایت های مرتبط
                         </div>
-                        <div class="card-body">
-                            <ul style="text-align: left;">
-                                <li>Site 1</li>
-                                <li>Site 2</li>
-                                <li>Site 3</li>
-                                <li>Site 4</li>
-                            </ul>
+                        <div class="pbody">
+                            <form action="index.php">
+                                <div class="">
+                                    <ul  class="mul">
+                                        <li>سایت 1</li>
+                                        <li>سایت 2</li>
+                                        <li>سایت 3</li>
+                                        <li>سایت 4</li>
+                                        <li>سایت 5</li>
+                                    </ul>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="">
-                    <div class="card border-info">
-                        <div class="card-header border-info">
-                            Post 1 Title
+                    <div class="post">
+                        <div class="posthead">
+                            تعطیلات
                         </div>
-                        <div class="card-body border-info">
-                            <p>Text</p>
-                            <p>Text Text Text</p>
+                        <div class="postbody">
+                            <h3>سلام!!!!!!!</h3>
+                            <h4>بازم تابستون! هورا!</h4>
                         </div>
-                        <div class="card-footer border-info">
-                            Posted in { Date & Time }
-                        </div>
-                    </div>
-                    <br>
-                    <div class="card border-info">
-                        <div class="card-header border-info">
-                            Post 2 Title
-                        </div>
-                        <div class="card-body border-info">
-                            <p>Text Text Text Text Text Text Text Text Text Text Text</p>
-                            <p>Text Text Text Text Text Text Text Text</p>
-                        </div>
-                        <div class="card-footer border-info">
-                            Posted in { Date & Time }
+                        <div class="postfooter">
+                            پست شده در ( تاریخ ) ( ساعت )
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="text-center">
-                    <div class="card border-success">
-                        <div class="card-header border-success">
-                            School
+                    <div class="part">
+                        <div class="phead">
+                            هنرستان ما
                         </div>
-                        <div class="card-body">
-                            Little information of school
+                        <div class="pbody">
+                            <form action="index.php">
+                                <div class="">
+                                    توضیحات درباره هنرستان آفرینش
+                                </div>
+                            </form>
                         </div>
                     </div>
                     <br>
-                    <div class="card border-success">
-                        <div class="card-header border-success">
-                            School Activities
+                    <div class="part">
+                        <div class="phead">
+                            فعالیت های ما
                         </div>
-                        <div class="card-body">
-                            Part for school activities
+                        <div class="pbody">
+                            <form action="index.php">
+                                <div class="">
+                                    فعالیت های هنرستان
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
