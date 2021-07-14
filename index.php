@@ -9,16 +9,19 @@
     <link href="pack/bootstrap.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Harmattan&display=swap');
+
         body {
             padding: 7%;
+            font-family: 'Harmattan', sans-serif;
         }
     </style>
 </head>
-<body>
+<body dir="rtl">
 <div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="."><i class="fa fa-bank"></i> High School</a>
+            <a class="navbar-brand" href="."><i class="fa fa-bank"></i> هنرستان آفرینش</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -27,25 +30,25 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-newspaper"></i> News</a>
+                        <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-newspaper"></i> اخبار</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-info"></i> About</a>
+                        <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-info"></i> درباره هنرستان</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-phone"></i> contact</a>
+                        <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-phone"></i> ارتباط با هنرستان</a>
                     </li>
                 </ul>
                 <div class="navbar-nav">
                     <?php
                     if ($status == true) {
                         ?>
-                        <a class="nav-link active" href="user"><i class="fa fa-dashboard"></i> Go To Panel</a> <a class="nav-link active" href="account/logout.php"><i class="fa fa-sign-out"></i> Logout</a>
+                        <a class="nav-link active" href="user"><i class="fa fa-dashboard"></i> Go To Panel</a> <a class="nav-link active" href="account/logout.php"><i class="fa fa-sign-out"></i> خروج از حساب</a>
                         <?php
                     }
                     else {
                         ?>
-                        <a class="nav-link active" href="account"><i class="fa fa-sign-in"></i> Sign Up or Sign In</a>
+                        <a class="nav-link active" href="account"><i class="fa fa-sign-in"></i> ورود یا ساخت حساب</a>
                         <?php
                     }
                     ?>
