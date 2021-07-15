@@ -8,21 +8,13 @@
     <title>Setayesh - Account</title>
     <link href="../pack/bootstrap.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
-    <style>
-        body {
-            padding: 7%;
-        }
-        .dialog {
-            padding: 8%;
-            border-radius: 5px;
-        }
-    </style>
+    <link href="../pack/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<div dir="rtl">
+    <nav class="navbar navbar-expand-lg navbar-light bg-custom fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="."><i class="fa fa-bank"></i> High School</a>
+            <a class="navbar-brand" href="."><i class="fa fa-bank"></i> هنرستان آفرینش</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -31,13 +23,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-newspaper"></i> News</a>
+                        <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-newspaper"></i> اخبار</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-info"></i> About</a>
+                        <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-info"></i> درباره هنرستان</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-phone"></i> contact</a>
+                        <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-phone"></i> ارتباط با هنرستان</a>
                     </li>
                 </ul>
             </div>
@@ -48,63 +40,59 @@
         <div class="row">
             <div class="row">
                 <div class="col-md-5">
-                    <div class="dialog border border-success">
-                        <h1 class="display-6 text-success">Create new account</h1>
-                        <hr class="border-success border">
+                    <div class="">
+                        <h1 class="titleaccount">ساخت حساب جدید</h1>
+                        <hr class="lineaccount">
                         <br>
                         <form action="index.php" method="post">
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" name="fname" class="form-control text-success border-success inp" placeholder="First Name">
+                                    <input type="text" name="fname" class="accountinp" placeholder="نام">
                                 </div>
                                 <div class="col">
-                                    <input type="text" name="lname" class="form-control text-success border-success inp"
-                                           placeholder="Last Name">
+                                    <input type="text" name="lname" class="accountinp" placeholder="نام خانوادگی">
                                 </div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col">
-                                    <input type="text" name="phone" class="form-control text-success border-success inp"
-                                           placeholder="Phone">
+                                    <input type="text" name="phone" class="accountinp" placeholder="شماره همراه">
                                 </div>
                                 <div class="col">
-                                    <input type="text" name="email" class="form-control text-success border-success inp" placeholder="E-Mail">
+                                    <input type="text" name="email" class="accountinp" placeholder="ایمیل">
                                 </div>
                             </div>
                             <br>
                             <div class="row">
                                 <div class="col">
-                                    <input type="password" name="pass" class="form-control text-success border-success inp" placeholder="Password">
+                                    <input type="password" name="pass" class="accountinp" placeholder="رمز">
                                 </div>
                                 <div class="col">
-                                    <input type="password" name="conpass" class="form-control text-success border-success inp"
-                                           placeholder="Confirm Password">
+                                    <input type="password" name="conpass" class="accountinp" placeholder="تایید رمز">
                                 </div>
                             </div>
                             <br>
-                            <button type="submit" id="reg_user" name="reg_user" class="btn btn-success">Create account</button>
+                            <button type="submit" id="reg_user" name="reg_user" class="accountbtn">ساخت حساب</button>
                         </form>
                     </div>
                 </div>
                 <div class="col-md-1"></div>
                 <div class="col-md-5">
-                    <div class="dialog border border-primary">
-                        <h1 class="display-6 text-primary">Login to your account</h1>
-                        <hr class="border-primary border">
+                    <div class="">
+                        <h1 class="logintitle">ورود به حساب</h1>
+                        <hr class="loginline">
                         <br>
                         <form action="index.php" method="post">
                             <div class="row">
                                 <div class="col">
-                                    <input type="email" name="email" class="form-control text-primary border-primary inp" placeholder="E-Mail">
+                                    <input type="text" name="email" class="logininp" placeholder="ایمیل">
                                 </div>
                                 <div class="col">
-                                    <input type="text" name="password" class="form-control text-primary border-primary inp"
-                                           placeholder="Password">
+                                    <input type="password" name="pass" class="logininp" placeholder="رمز">
                                 </div>
                             </div>
                             <br>
-                            <button type="submit" id="log_user" name="log_user" class="btn btn-primary">Login</button>
+                            <button type="submit" id="log_user" name="log_user" class="loginbtn">ورود</button>
                         </form>
                     </div>
                 </div>
