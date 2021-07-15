@@ -16,3 +16,6 @@
 
 **Jul, 15, 2021**
 - [ ] Add panel
+
+**JUl, 16, 2021**
+- [x] Add project in Github -> Jul, 16, 2021
