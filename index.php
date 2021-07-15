@@ -12,11 +12,6 @@
 </head>
 <body dir="rtl">
 <div>
-    <div class="con">
-        <div class="star star1"></div>
-        <div class="star star2"></div>
-        <div class="star star3"></div>
-    </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-custom fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="."><i class="fa fa-bank"></i> هنرستان آفرینش</a>
