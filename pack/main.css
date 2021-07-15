@@ -101,3 +101,67 @@ body {
     margin-right: 0;
     padding-left: 40px;
 }
+
+.accountinp {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-bottom: solid 1px #0dcaf0;
+    border-top: solid 1px white;
+    border-left: solid 1px white;
+    border-right: solid 1px white;
+    text-align: right;
+    font-weight: 400;
+    color: #212529;
+    background-color: #fff;
+}
+
+.accountbtn {
+    width: 100%;
+    padding: .375rem .75rem;
+    background: #0dcaf0;
+    color: white;
+    border-radius: 5px;
+    border: solid 1px #0dcaf0;
+}
+
+.titleaccount {
+    color: #0dcaf0;
+}
+
+.lineaccount {
+    color: #0dcaf0;
+}
+
+.logininp {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-bottom: solid 1px #198754;
+    border-top: solid 1px white;
+    border-left: solid 1px white;
+    border-right: solid 1px white;
+    text-align: right;
+    font-weight: 400;
+    color: #212529;
+    background-color: #fff;
+}
+
+.loginbtn {
+    width: 100%;
+    padding: .375rem .75rem;
+    background: #198754;
+    color: white;
+    border-radius: 5px;
+    border: solid 1px #198754;
+}
+
+.loginline {
+    color: #198754;
+}
+
+.logintitle {
+    color: #198754;
+}
