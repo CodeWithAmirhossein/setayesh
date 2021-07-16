@@ -34,7 +34,7 @@ $posts = mysqli_query($connection, $getposts);
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="."><i class="fa fa-newspaper"></i> اخبار</a>
+                        <a class="nav-link active" aria-current="page" href="news.php"><i class="fa fa-newspaper"></i> اخبار</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="about.php"><i class="fa fa-info"></i> درباره هنرستان</a>

@@ -32,7 +32,7 @@ $status = $_SESSION['status'];
                         <a class="nav-link active" aria-current="page" href="news.php"><i class="fa fa-newspaper"></i> اخبار</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="."><i class="fa fa-info"></i> درباره هنرستان</a>
+                        <a class="nav-link active" aria-current="page" href="about.php"><i class="fa fa-info"></i> درباره هنرستان</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="contact.php"><i class="fa fa-phone"></i> ارتباط با هنرستان</a>
