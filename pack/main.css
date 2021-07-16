@@ -165,3 +165,25 @@ body {
 .logintitle {
     color: #198754;
 }
+
+.news {
+    box-shadow:  20px 20px 65px #d9d9d9, -20px -20px 65px #f1f1f1;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.newshead {
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 5%;
+    border: solid 1px #70a7ff;
+    background-color: #70a7ff;
+}
+
+.newsbody {
+    padding: 5%;
+    color: #70a7ff;
+    border: solid 1px #70a7ff;
+    border-bottom-color: #70a7ff;
+}
