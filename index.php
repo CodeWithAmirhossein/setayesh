@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+$status = $_SESSION["status"];
+
+include("pack/config.php");
+
+$getposts = "SELECT * FROM posts ORDER BY row DESC";
+$posts = mysqli_query($connection, $getposts);
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -34,9 +45,9 @@
                 </ul>
                 <div class="navbar-nav">
                     <?php
-                    if ($status == true) {
+                    if ($status) {
                         ?>
-                        <a class="nav-link active" href="user"><i class="fa fa-dashboard"></i> Go To Panel</a> <a class="nav-link active" href="account/logout.php"><i class="fa fa-sign-out"></i> خروج از حساب</a>
+                        <a class="nav-link active" href="user"><i class="fa fa-dashboard"></i> ورود به پنل</a> <a class="nav-link active" href="account/logout.php"><i class="fa fa-sign-out"></i> خروج از حساب</a>
                         <?php
                     }
                     else {
