@@ -16,10 +16,32 @@ $newss = mysqli_query($connection, $getnews);
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Setayesh - About</title>
+    <title>Setayesh - News</title>
     <link href="../pack/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="../pack/main.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
+    <style>
+        .news {
+            box-shadow:  20px 20px 65px #d9d9d9, -20px -20px 65px #f1f1f1;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .newshead {
+            color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding: 3%;
+            border: solid 1px #6610f2;
+            background-color: #6610f2;
+        }
+
+        .newsbody {
+            padding: 5%;
+            color: #6610f2;
+            border: solid 1px #6610f2;
+        }
+    </style>
 </head>
 <body dir="rtl">
 <div>
@@ -68,13 +90,12 @@ $newss = mysqli_query($connection, $getnews);
                 if (mysqli_num_rows($newss) > 0) {
                     while ($news = mysqli_fetch_assoc($newss)) {
                         ?>
-                        <div class="post">
-                            <div class="posthead">
-                                <h3><?php echo $news["title"]; ?></h3>
+                        <div class="news">
+                            <div class="newshead">
+                                <h3><?php echo $news["title"]; ?> <span style="float: left;"><?php echo $news["datetime"]; ?></span></h3>
                             </div>
-                            <div class="postbody">
+                            <div class="newsbody">
                                 <h4><?php echo $news["news"]; ?></h4>
-                                <p><?php echo $news["datetime"]; ?></p>
                             </div>
                         </div>
                         <br>
