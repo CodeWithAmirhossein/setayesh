@@ -5,8 +5,8 @@ $status = $_SESSION['status'];
 
 include("../pack/config.php");
 
-$getposts = "SELECT * FROM posts";
-$posts = mysqli_query($connection, $getposts);
+$getnews = "SELECT * FROM posts";
+$newss = mysqli_query($connection, $getnews);
 ?>
 
 <!doctype html>
@@ -64,7 +64,27 @@ $posts = mysqli_query($connection, $getposts);
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6">
-
+                <?php
+                if (mysqli_num_rows($newss) > 0) {
+                    while ($news = mysqli_fetch_assoc($newss)) {
+                        ?>
+                        <div class="post">
+                            <div class="posthead">
+                                <?php echo $news["title"]; ?>
+                            </div>
+                            <div class="postbody">
+                                <?php echo $news["datetime"]; ?>
+                                <br>
+                                <?php echo $news["txt"]; ?>
+                            </div>
+                        </div>
+                        <br>
+                        <?php
+                    }
+                }
+                else {
+                    echo "خبر جدیدی یافت نشد";
+                }
             </div>
         </div>
     </div>
