@@ -3,6 +3,8 @@ session_start();
 
 $status = $_SESSION['status'];
 
+include("../pack/config.php");
+
 if ($status) {
     ?>
     <script>
@@ -13,9 +15,9 @@ if ($status) {
 
 $errors = array();
 
-array_push($errors, "one");
-array_push($errors, "two");
-array_push($errors, "three");
+if (isset($_POST["logging"])) {
+    $
+}
 
 ?>
 
@@ -103,7 +105,7 @@ array_push($errors, "three");
                                 </div>
                             </div>
                             <br>
-                            <button type="submit" id="reg_user" name="reg_user" class="accountbtn">ساخت حساب</button>
+                            <button type="submit" id="reg_user" name="registering" class="accountbtn">ساخت حساب</button>
                         </form>
                     </div>
                 </div>
@@ -123,7 +125,7 @@ array_push($errors, "three");
                                 </div>
                             </div>
                             <br>
-                            <button type="submit" id="log_user" name="log_user" class="loginbtn">ورود</button>
+                            <button type="submit" id="log_user" name="logging" class="loginbtn">ورود</button>
                         </form>
                     </div>
                     <br>
