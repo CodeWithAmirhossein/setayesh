@@ -31,7 +31,9 @@ if (isset($_POST["logging"])) {
         $result = mysqli_query($connection, $sql);
 
         if (mysqli_num_rows($result) == 1) {
+            $user = mysqli_fetch_assoc($result);
             $_SESSION['status'] = true;
+            $_SESSION['id'] = $user["id"];
             ?>
             <script>
                 window.location.replace("../user");
