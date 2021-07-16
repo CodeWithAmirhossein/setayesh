@@ -118,7 +118,7 @@ $posts = mysqli_query($connection, $getposts);
                                 <?php echo $post["txt"]; ?>
                             </div>
                             <div class="postfooter">
-                                <?php echo $post["dateandtime"]; ?>
+                                <?php echo $post["datetime"]; ?>
                             </div>
                         </div>
                         <br>
