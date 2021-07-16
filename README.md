@@ -1,7 +1,7 @@
 **TODO**
 
 **Jul, 12, 2021**
-- [ ] Introduce school ( Talk about it, pictures )
+- [x] Introduce school ( Talk about it, pictures ) -> Jul, 16, 2021
 - [x] Site map ( Introduce, about, signin and login, panel ) -> Jul, 14, 2021
 - [x] Links, CSS, JS, PHP -> Jul, 14, 2021
 - [ ] Pictures
@@ -19,3 +19,6 @@
 
 **JUl, 16, 2021**
 - [x] Add project in Github -> Jul, 16, 2021
+- [x] Add sql -> Jul, 16, 2021
+- [x] Add database -> Jul, 16, 2021
+- [x] Get news -> Jul, 16, 2021
