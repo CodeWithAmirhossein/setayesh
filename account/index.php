@@ -11,6 +11,12 @@ if ($status) {
     <?php
 }
 
+$errors = array();
+
+array_push($errors, "one");
+array_push($errors, "two");
+array_push($errors, "three");
+
 ?>
 
 <!doctype html>
@@ -24,6 +30,16 @@ if ($status) {
     <link href="../pack/bootstrap.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
     <link href="../pack/main.css" rel="stylesheet" type="text/css">
+    <style>
+        .errors {
+            border: solid 1px red;
+            background: tomato;
+            border-radius: 5px;
+            color: white;
+            font-size: 20px;
+            padding: 2%;
+        }
+    </style>
 </head>
 <body>
 <div dir="rtl">
@@ -111,9 +127,21 @@ if ($status) {
                         </form>
                     </div>
                     <br>
-                    <div class="errors">
-
-                    </div>
+                    <?php
+                    if (count($errors) > 0) {
+                        ?>
+                        <div class="errors">
+                            <h4>ارور ها!</h4>
+                            <?php
+                            foreach ($errors as $error) {
+                                echo "<span class='error'>" . $error . "</span>";
+                                echo "<br>";
+                            }
+                            ?>
+                        </div>
+                        <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>
