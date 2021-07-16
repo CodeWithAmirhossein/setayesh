@@ -18,6 +18,7 @@ $errors = array();
 if (isset($_POST["logging"])) {
     $email = mysqli_real_escape_string($connection, $_POST["email"]);
     $password = mysqli_real_escape_string($connection, $_POST["pass"]);
+    $admin = mysqli_real_escape_string($connection, $_POST["checkbox"]);
 
     if (empty($email)) {
         array_push($errors, "ایمیل را وارد کنید");
@@ -26,22 +27,43 @@ if (isset($_POST["logging"])) {
         array_push($errors, "رمز را وارد کنید");
     }
 
-    if (count($errors) == 0) {
-        $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
-        $result = mysqli_query($connection, $sql);
+    if (isset($checkbox)) {
+        if (count($errors) == 0) {
+            $sql = "SELECT * FROM admin WHERE email = '$email' AND password = '$password'";
+            $result = mysqli_query($connection, $sql);
 
-        if (mysqli_num_rows($result) == 1) {
-            $user = mysqli_fetch_assoc($result);
-            $_SESSION['status'] = true;
-            $_SESSION['id'] = $user["id"];
-            ?>
-            <script>
-                window.location.replace("../user");
-            </script>
-            <?php
+            if (mysqli_num_rows($result) == 1) {
+                $_SESSION['status'] = true;
+                $_SESSION['id'] = "admin";
+                ?>
+                <script>
+                    window.location.replace("../admin");
+                </script>
+                <?php
+            }
+            else {
+                array_push($errors, "ایمیل یا رمز اشتباه است");
+            }
         }
-        else {
-            array_push($errors, "ایمیل یا رمز اشتباه است");
+    }
+    else {
+        if (count($errors) == 0) {
+            $sql = "SELECT * FROM students WHERE email = '$email' AND password = '$password'";
+            $result = mysqli_query($connection, $sql);
+
+            if (mysqli_num_rows($result) == 1) {
+                $user = mysqli_fetch_assoc($result);
+                $_SESSION['status'] = true;
+                $_SESSION['id'] = $user["id"];
+                ?>
+                <script>
+                    window.location.replace("../user");
+                </script>
+                <?php
+            }
+            else {
+                array_push($errors, "ایمیل یا رمز اشتباه است");
+            }
         }
     }
 }
