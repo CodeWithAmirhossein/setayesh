@@ -3,9 +3,14 @@ session_start();
 
 $status = $_SESSION["status"];
 
-include("pack/config.php");
+$server = "127.0.0.1";
+$username = "setayesh";
+$password = "setayesh";
+$database = "setayesh";
 
-$getposts = "SELECT * FROM posts ORDER BY row DESC";
+$connection = mysqli_connect($server, $username, $password, $database);
+
+$getposts = "SELECT * FROM posts";
 $posts = mysqli_query($connection, $getposts);
 ?>
 
@@ -101,20 +106,16 @@ $posts = mysqli_query($connection, $getposts);
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="">
-                    <div class="post">
-                        <div class="posthead">
-                            تعطیلات
-                        </div>
-                        <div class="postbody">
-                            <h3>سلام!!!!!!!</h3>
-                            <h4>بازم تابستون! هورا!</h4>
-                        </div>
-                        <div class="postfooter">
-                            پست شده در ( تاریخ ) ( ساعت )
-                        </div>
-                    </div>
-                </div>
+                <?php
+                if (mysqli_num_rows($posts) > 0) {
+                    while ($post = mysqli_fetch_assoc($posts)) {
+                        echo "post part";
+                    }
+                }
+                else {
+                    echo "پست جدیدی یافت نشد";
+                }
+                ?>
             </div>
             <div class="col-md-3">
                 <div class="text-center">
