@@ -37,7 +37,7 @@ $newss = mysqli_query($connection, $getnews);
         }
 
         .newsbody {
-            padding: 5%;
+            padding: 3%;
             color: #6610f2;
             border: solid 1px #6610f2;
         }
