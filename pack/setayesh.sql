@@ -23,3 +23,31 @@ CREATE TABLE `news`
   AUTO_INCREMENT = 1
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_unicode_ci;
+
+DROP TABLE IF EXISTS `students`;
+CREATE TABLE `students`
+(
+    `row`      int(11) NOT NULL AUTO_INCREMENT,
+    `email`    text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `password` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `id`       text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `name`     text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    PRIMARY KEY (`row`)
+) ENGINE = InnoDB
+  AUTO_INCREMENT = 1
+  DEFAULT CHARSET = utf8mb4
+  COLLATE = utf8mb4_unicode_ci;
+
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE `admin`
+(
+    `row`      int(11) NOT NULL AUTO_INCREMENT,
+    `email`    text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `password` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `id`       text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    `name`     text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+    PRIMARY KEY (`row`)
+) ENGINE = InnoDB
+  AUTO_INCREMENT = 1
+  DEFAULT CHARSET = utf8mb4
+  COLLATE = utf8mb4_unicode_ci;
