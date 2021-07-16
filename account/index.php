@@ -14,7 +14,7 @@
 <div dir="rtl">
     <nav class="navbar navbar-expand-lg navbar-light bg-custom fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="."><i class="fa fa-bank"></i> هنرستان آفرینش</a>
+            <a class="navbar-brand" href="../"><i class="fa fa-bank"></i> هنرستان آفرینش</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -23,13 +23,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-newspaper"></i> اخبار</a>
+                        <a class="nav-link active" aria-current="page" href="../pages/news.php"><i class="fa fa-newspaper"></i> اخبار</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-info"></i> درباره هنرستان</a>
+                        <a class="nav-link active" aria-current="page" href="../pages/about.php"><i class="fa fa-info"></i> درباره هنرستان</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fa fa-phone"></i> ارتباط با هنرستان</a>
+                        <a class="nav-link active" aria-current="page" href="../pages/contact.php"><i class="fa fa-phone"></i> ارتباط با هنرستان</a>
                     </li>
                 </ul>
             </div>
