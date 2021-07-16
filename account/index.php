@@ -29,6 +29,18 @@ if (isset($_POST["logging"])) {
     if (count($errors) == 0) {
         $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
         $result = mysqli_query($connection, $sql);
+
+        if (mysqli_num_rows($result) == 1) {
+            $_SESSION['status'] = true;
+            ?>
+            <script>
+                window.location.replace("../user");
+            </script>
+            <?php
+        }
+        else {
+            array_push($errors, "ایمیل یا رمز اشتباه است");
+        }
     }
 }
 
