@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+$status = $_SESSION['status'];
+
+if ($status) {
+    ?>
+    <script>
+        window.location.replace("../user");
+    </script>
+    <?php
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -94,6 +109,10 @@
                             <br>
                             <button type="submit" id="log_user" name="log_user" class="loginbtn">ورود</button>
                         </form>
+                    </div>
+                    <br>
+                    <div class="errors">
+                        
                     </div>
                 </div>
             </div>
