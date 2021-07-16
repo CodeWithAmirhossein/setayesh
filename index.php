@@ -109,7 +109,20 @@ $posts = mysqli_query($connection, $getposts);
                 <?php
                 if (mysqli_num_rows($posts) > 0) {
                     while ($post = mysqli_fetch_assoc($posts)) {
-                        echo "post part";
+                        ?>
+                        <div class="post">
+                            <div class="posthead">
+                                <?php echo $post["title"]; ?>
+                            </div>
+                            <div class="postbody">
+                                <?php echo $post["txt"]; ?>
+                            </div>
+                            <div class="postfooter">
+                                <?php echo $post["dateandtime"]; ?>
+                            </div>
+                        </div>
+                        <br>
+                        <?php
                     }
                 }
                 else {
