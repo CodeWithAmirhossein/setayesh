@@ -27,7 +27,7 @@ if (isset($_POST["logging"])) {
         array_push($errors, "رمز را وارد کنید");
     }
 
-    if (isset($checkbox)) {
+    if (isset($admin)) {
         if (count($errors) == 0) {
             $sql = "SELECT * FROM admin WHERE email = '$email' AND password = '$password'";
             $result = mysqli_query($connection, $sql);
