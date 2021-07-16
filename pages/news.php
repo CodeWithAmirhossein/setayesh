@@ -5,7 +5,7 @@ $status = $_SESSION['status'];
 
 include("../pack/config.php");
 
-$getnews = "SELECT * FROM posts";
+$getnews = "SELECT * FROM news";
 $newss = mysqli_query($connection, $getnews);
 ?>
 
@@ -70,12 +70,11 @@ $newss = mysqli_query($connection, $getnews);
                         ?>
                         <div class="post">
                             <div class="posthead">
-                                <?php echo $news["title"]; ?>
+                                <h3><?php echo $news["title"]; ?></h3>
                             </div>
                             <div class="postbody">
-                                <?php echo $news["datetime"]; ?>
-                                <br>
-                                <?php echo $news["txt"]; ?>
+                                <h4><?php echo $news["news"]; ?></h4>
+                                <p><?php echo $news["datetime"]; ?></p>
                             </div>
                         </div>
                         <br>
@@ -85,6 +84,7 @@ $newss = mysqli_query($connection, $getnews);
                 else {
                     echo "خبر جدیدی یافت نشد";
                 }
+                ?>
             </div>
         </div>
     </div>
