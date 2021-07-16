@@ -12,7 +12,8 @@
 - [ ] Add logout
 
 **Jul, 14, 2021**
-- [ ] Create login backend
+- [x] Create login backend -> Jul, 16, 2021
+- [ ] Create register backend
 
 **Jul, 15, 2021**
 - [ ] Add panel
