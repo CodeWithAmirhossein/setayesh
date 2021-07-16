@@ -3,12 +3,7 @@ session_start();
 
 $status = $_SESSION["status"];
 
-$server = "127.0.0.1";
-$username = "setayesh";
-$password = "setayesh";
-$database = "setayesh";
-
-$connection = mysqli_connect($server, $username, $password, $database);
+include("pack/config.php");
 
 $getposts = "SELECT * FROM posts";
 $posts = mysqli_query($connection, $getposts);
