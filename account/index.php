@@ -16,7 +16,20 @@ if ($status) {
 $errors = array();
 
 if (isset($_POST["logging"])) {
-    $
+    $email = mysqli_real_escape_string($connection, $_POST["email"]);
+    $password = mysqli_real_escape_string($connection, $_POST["pass"]);
+
+    if (empty($email)) {
+        array_push($errors, "ایمیل را وارد کنید");
+    }
+    if (empty($password)) {
+        array_push($errors, "رمز را وارد کنید");
+    }
+
+    if (count($errors) == 0) {
+        $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+        $result = mysqli_query($connection, $sql);
+    }
 }
 
 ?>
