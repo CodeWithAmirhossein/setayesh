@@ -150,6 +150,11 @@ if (isset($_POST["logging"])) {
                                 <div class="col">
                                     <input type="password" name="pass" class="logininp" placeholder="رمز">
                                 </div>
+                                <div>
+                                    <br>
+                                    <input type="checkbox" name="checkbox" id="check">
+                                    <label class="logintitle" for="check">ورود به عنوان مدیر</label>
+                                </div>
                             </div>
                             <br>
                             <button type="submit" id="log_user" name="logging" class="loginbtn">ورود</button>
