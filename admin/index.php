@@ -29,11 +29,19 @@ if (isset($_POST["newpost"])) {
     $text = $_POST['posttext'];
     $datetime = date("M d, Y H:i:s");;
 
-    $insert = "INSERT INTO posts (`title`, `text`, `datetime`) VALUE ('$title', '$text', '$database')";
+    $insert = "INSERT INTO posts (`title`, `txt`, `datetime`) VALUE ('$title', '$text', '$database')";
     if (mysqli_query($connection, $insert)) {
         ?>
         <script>
             window.alert("پست شما ثبت شد");
+            window.location.replace('.');
+        </script>
+        <?php
+    }
+    else {
+        ?>
+        <script>
+            window.alert("<?php echo mysqli_error($connection); ?>");
             window.location.replace('.');
         </script>
         <?php
@@ -97,7 +105,7 @@ if (isset($_POST["newpost"])) {
                 <div class="newpost">
                     <h4>گذاشتن پست جدید</h4>
                     <br>
-                    <form action="index.php">
+                    <form action="index.php" method="post">
                         <div class="">
                             <label>موضوع پست</label>
                             <input type="text" name="posttitle" class="postinp" placeholder="موضوع پست">
