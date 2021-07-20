@@ -46,9 +46,18 @@ $posts = mysqli_query($connection, $getposts);
                 <div class="navbar-nav">
                     <?php
                     if ($status) {
-                        ?>
-                        <a class="nav-link active" href="user"><i class="fa fa-dashboard"></i> ورود به پنل</a> <a class="nav-link active" href="account/logout.php"><i class="fa fa-sign-out"></i> خروج از حساب</a>
-                        <?php
+                        if ($_SESSION['person'] == "admin") {
+                            ?>
+                            <a class="nav-link active" href="admin"><i class="fa fa-dashboard"></i> ورود به پنل</a>
+                            <a class="nav-link active" href="account/logout.php"><i class="fa fa-sign-out"></i> خروج از حساب</a>
+                            <?php
+                        }
+                        else {
+                            ?>
+                            <a class="nav-link active" href="student"><i class="fa fa-dashboard"></i> ورود به پنل</a>
+                            <a class="nav-link active" href="account/logout.php"><i class="fa fa-sign-out"></i> خروج از حساب</a>
+                            <?php
+                        }
                     }
                     else {
                         ?>
