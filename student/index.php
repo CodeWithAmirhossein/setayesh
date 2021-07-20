@@ -51,13 +51,13 @@ $user = mysqli_fetch_assoc($get_ser_data_result);
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="news.php"><i class="fa fa-newspaper"></i> اخبار</a>
+                        <a class="nav-link active" aria-current="page" href="../pages/news.php"><i class="fa fa-newspaper"></i> اخبار</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="about.php"><i class="fa fa-info"></i> درباره هنرستان</a>
+                        <a class="nav-link active" aria-current="page" href="../pages/about.php"><i class="fa fa-info"></i> درباره هنرستان</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="contact.php"><i class="fa fa-phone"></i> ارتباط با هنرستان</a>
+                        <a class="nav-link active" aria-current="page" href="../pages/contact.php"><i class="fa fa-phone"></i> ارتباط با هنرستان</a>
                     </li>
                 </ul>
                 <div class="navbar-nav">
@@ -71,7 +71,7 @@ $user = mysqli_fetch_assoc($get_ser_data_result);
         <div class="row">
             <div class="col-md-6">
                 <h3>خوش آمدید <span><?php echo $user['name']; ?> !</span></h3>
-                <p>!</p>
+                <p>از گشتن د</p>
             </div>
         </div>
     </div>
