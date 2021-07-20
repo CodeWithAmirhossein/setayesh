@@ -48,6 +48,30 @@ if (isset($_POST["newpost"])) {
     }
 }
 
+if (isset($_POST["newnews"])) {
+    $title = $_POST['newstitle'];
+    $news = $_POST['newstext'];
+    $datetime = date("M d, Y H:i:s");;
+
+    $insert = "INSERT INTO news (`title`, `news`, `datetime`) VALUE ('$title', '$news', '$database')";
+    if (mysqli_query($connection, $insert)) {
+        ?>
+        <script>
+            window.alert("خبر شما ثبت شد");
+            window.location.replace('.');
+        </script>
+        <?php
+    }
+    else {
+        ?>
+        <script>
+            window.alert("<?php echo mysqli_error($connection); ?>");
+            window.location.replace('.');
+        </script>
+        <?php
+    }
+}
+
 ?>
 
 <!doctype html>
@@ -122,15 +146,15 @@ if (isset($_POST["newpost"])) {
                 <div class="newnews">
                     <h4>گذاشتن خبر جدید</h4>
                     <br>
-                    <form action="index.php">
+                    <form action="index.php" method="post">
                         <div class="">
                             <label>موضوع خبر</label>
-                            <input type="text" class="newsinp" placeholder="موضوع خبر">
+                            <input type="text" name="newstitle" class="newsinp" placeholder="موضوع خبر">
                             <br>
                             <label>متن خبر</label>
-                            <textarea type="text" class="newsinp" rows="5" placeholder="متن خبر"></textarea>
+                            <textarea type="text" name="newstext" class="newsinp" rows="5" placeholder="متن خبر"></textarea>
                             <br>
-                            <button class="newsbtn" type="button">گذاشتن خبر</button>
+                            <button class="newsbtn" type="submit" name="newnews">گذاشتن خبر</button>
                         </div>
                     </form>
                 </div>
