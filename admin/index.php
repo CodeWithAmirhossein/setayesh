@@ -13,12 +13,7 @@ if (!$status) {
 
 $id = $_SESSION['id'];
 
-$server = "localhost";
-$username = "setayesh";
-$password = "setayesh";
-$database = "setayesh";
-
-$connection = mysqli_connect($server, $username, $password, $database);
+include("../pack/config.php");
 
 $get_user_data_query = "SELECT * FROM `admin` WHERE id = '$id'";
 $get_ser_data_result = mysqli_query($connection, $get_user_data_query);
