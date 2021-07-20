@@ -1,8 +1,8 @@
 .newnews {
-    border: solid 1px red;
+    border: solid 1px mediumseagreen;
     padding: 5%;
     text-align: right;
-    color: red;
+    color: mediumseagreen;
     border-radius: 10px;
 }
 .newsinp {
@@ -10,17 +10,44 @@
     width: 100%;
     padding: .375rem .75rem;
     font-size: 1rem;
-    border: solid 1px red;
+    border: solid 1px mediumseagreen;
     font-weight: 400;
-    color: red;
+    color: mediumseagreen;
     background-color: #fff;
     border-radius: .25rem;
 }
 .newsbtn {
     width: 100%;
     padding: .375rem .75rem;
-    background: red;
+    background: mediumseagreen;
     color: white;
     border-radius: 5px;
-    border: solid 1px red;
+    border: solid 1px mediumseagreen;
+}
+
+.newpost {
+    border: solid 1px mediumpurple;
+    padding: 5%;
+    text-align: right;
+    color: mediumpurple;
+    border-radius: 10px;
+}
+.postinp {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border: solid 1px mediumpurple;
+    font-weight: 400;
+    color: blue;
+    background-color: #fff;
+    border-radius: .25rem;
+}
+.postbtn {
+    width: 100%;
+    padding: .375rem .75rem;
+    background: mediumpurple;
+    color: white;
+    border-radius: 5px;
+    border: solid 1px mediumpurple;
 }
