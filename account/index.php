@@ -35,6 +35,7 @@ if (isset($_POST["logging"])) {
             if (mysqli_num_rows($result) == 1) {
                 $admin = mysqli_fetch_assoc($result);
                 $_SESSION['status'] = true;
+                $_SESSION['type'] = "admin";
                 $_SESSION['id'] = $admin['id'];
                 ?>
                 <script>
@@ -55,6 +56,7 @@ if (isset($_POST["logging"])) {
             if (mysqli_num_rows($result) == 1) {
                 $user = mysqli_fetch_assoc($result);
                 $_SESSION['status'] = true;
+                $_SESSION['type'] = "student";
                 $_SESSION['id'] = $user["id"];
                 ?>
                 <script>
