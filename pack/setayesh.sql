@@ -51,3 +51,5 @@ CREATE TABLE `admin`
   AUTO_INCREMENT = 1
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_unicode_ci;
+
+INSERT INTO `admin` (`email`, `password`, `id`, `name`) VALUES ('admin@yahoo.com', 'admin', '', 'نام و نام خانوادگی');
