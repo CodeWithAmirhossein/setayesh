@@ -16,9 +16,9 @@ if ($status) {
 $errors = array();
 
 if (isset($_POST["logging"])) {
-    $email = mysqli_real_escape_string($connection, $_POST["email"]);
-    $password = mysqli_real_escape_string($connection, $_POST["pass"]);
-    $admin = mysqli_real_escape_string($connection, $_POST["checkbox"]);
+    $email = $_POST["email"];
+    $password = $_POST["pass"];
+    $admin = $_POST["checkbox"];
 
     if (empty($email)) {
         array_push($errors, "ایمیل را وارد کنید");
@@ -67,6 +67,37 @@ if (isset($_POST["logging"])) {
             else {
                 array_push($errors, "ایمیل یا رمز اشتباه است");
             }
+        }
+    }
+}
+
+if (isset($_POST['registering'])) {
+    $firstname = $_POST["fname"];
+    $lastname = $_POST["lname"];
+    $mail = $_POST["email"];
+    $password = $_POST["password"];
+    $confirm = $_POST["confirm"];
+
+    if ($password == $confirm) {
+        $name = $firstname . " " . $lastname;
+        $id = rand(111111111, 999999999);
+
+        $insert = "INSERT INTO students (`email`, `password`, `id`, `name`) VALUES ('$mail', '$password', '$id', '$name')";
+        if (mysqli_query($connection, $insert)) {
+            ?>
+            <script>
+                window.alert("حساب شما ساخته شد");
+                window.location.replace('../student');
+            </script>
+            <?php
+        }
+        else {
+            ?>
+            <script>
+                window.alert("<?php echo mysqli_error($connection); ?>");
+                window.location.replace('.');
+            </script>
+            <?php
         }
     }
 }
@@ -150,14 +181,14 @@ if (isset($_POST["logging"])) {
                             <br>
                             <div class="row">
                                 <div class="col">
-                                    <input type="password" name="pass" class="accountinp" placeholder="رمز">
+                                    <input type="password" name="password" class="accountinp" placeholder="رمز">
                                 </div>
                                 <div class="col">
-                                    <input type="password" name="conpass" class="accountinp" placeholder="تایید رمز">
+                                    <input type="password" name="confirm" class="accountinp" placeholder="تایید رمز">
                                 </div>
                             </div>
                             <br>
-                            <button type="submit" id="reg_user" name="registering" class="accountbtn">ساخت حساب</button>
+                            <button type="submit" id="register" name="registering" class="accountbtn">ساخت حساب</button>
                         </form>
                     </div>
                 </div>
