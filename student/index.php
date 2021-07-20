@@ -61,18 +61,7 @@ $user = mysqli_fetch_assoc($get_ser_data_result);
                     </li>
                 </ul>
                 <div class="navbar-nav">
-                    <?php
-                    if ($status) {
-                        ?>
-                        <a class="nav-link active" href="../user"><i class="fa fa-dashboard"></i> ورود به پنل</a> <a class="nav-link active" href="account/logout.php"><i class="fa fa-sign-out"></i> خروج از حساب</a>
-                        <?php
-                    }
-                    else {
-                        ?>
-                        <a class="nav-link active" href="../account"><i class="fa fa-sign-in"></i> ورود یا ساخت حساب</a>
-                        <?php
-                    }
-                    ?>
+                    <a class="nav-link active" href="../account/logout.php"><i class="fa fa-sign-out"></i> خروج از حساب</a>
                 </div>
             </div>
         </div>
