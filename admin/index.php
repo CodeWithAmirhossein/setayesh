@@ -35,6 +35,7 @@ $admin = mysqli_fetch_assoc($get_ser_data_result);
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Setayesh - About</title>
     <link href="../pack/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
     <link href="../pack/main.css" rel="stylesheet" type="text/css">
     <script src="https://kit.fontawesome.com/4a679d8ec0.js" crossorigin="anonymous"></script>
 </head>
@@ -72,6 +73,38 @@ $admin = mysqli_fetch_assoc($get_ser_data_result);
             <div class="col-md-6">
                 <h3>خوش آمدید <span><?php echo $admin['name']; ?> !</span></h3>
                 <p>شما میتوانید پست یا خبر جدید را در سایت قرار دهید!</p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mewpost">
+                    <h4>گذاشتن پست جدید</h4>
+                    <form action="index.php">
+                        <div class="">
+                            <input type="text" class="inp" placeholder="جستجو">
+                            <br>
+                            <button class="bttn" type="button">جستجو کن</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="newnews">
+                    <h4>گذاشتن خبر جدید</h4>
+                    <br>
+                    <form action="index.php">
+                        <div class="">
+                            <label>موضوع خبر</label>
+                            <input type="text" class="newsinp" placeholder="موضوع خبر">
+                            <br>
+                            <label>متن خبر</label>
+                            <textarea type="text" class="newsinp" rows="5" placeholder="متن خبر"></textarea>
+                            <br>
+                            <button class="newsbtn" type="button">گذاشتن خبر</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
