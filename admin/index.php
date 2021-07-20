@@ -24,6 +24,22 @@ $get_user_data_query = "SELECT * FROM `admin` WHERE id = '$id'";
 $get_ser_data_result = mysqli_query($connection, $get_user_data_query);
 $admin = mysqli_fetch_assoc($get_ser_data_result);
 
+if (isset($_POST["newpost"])) {
+    $title = $_POST['posttitle'];
+    $text = $_POST['posttext'];
+    $datetime = date("M d, Y H:i:s");;
+
+    $insert = "INSERT INTO posts (`title`, `text`, `datetime`) VALUE ('$title', '$text', '$database')";
+    if (mysqli_query($connection, $insert)) {
+        ?>
+        <script>
+            window.alert("پست شما ثبت شد");
+            window.location.replace('.');
+        </script>
+        <?php
+    }
+}
+
 ?>
 
 <!doctype html>
@@ -84,12 +100,12 @@ $admin = mysqli_fetch_assoc($get_ser_data_result);
                     <form action="index.php">
                         <div class="">
                             <label>موضوع پست</label>
-                            <input type="text" class="postinp" placeholder="موضوع پست">
+                            <input type="text" name="posttitle" class="postinp" placeholder="موضوع پست">
                             <br>
                             <label>متن پست</label>
-                            <textarea type="text" class="postinp" rows="5" placeholder="متن پست"></textarea>
+                            <textarea type="text" name="posttext" class="postinp" rows="5" placeholder="متن پست"></textarea>
                             <br>
-                            <button class="postbtn" type="button">پست کردن</button>
+                            <button class="postbtn" type="submit" name="newpost">پست کردن</button>
                         </div>
                     </form>
                 </div>
