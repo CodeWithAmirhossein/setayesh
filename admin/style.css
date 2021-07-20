@@ -1,0 +1,26 @@
+.newnews {
+    border: solid 1px red;
+    padding: 5%;
+    text-align: right;
+    color: red;
+    border-radius: 10px;
+}
+.newsinp {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border: solid 1px red;
+    font-weight: 400;
+    color: red;
+    background-color: #fff;
+    border-radius: .25rem;
+}
+.newsbtn {
+    width: 100%;
+    padding: .375rem .75rem;
+    background: red;
+    color: white;
+    border-radius: 5px;
+    border: solid 1px red;
+}

@@ -78,13 +78,18 @@ $admin = mysqli_fetch_assoc($get_ser_data_result);
         <br>
         <div class="row">
             <div class="col-md-6">
-                <div class="mewpost">
+                <div class="newpost">
                     <h4>گذاشتن پست جدید</h4>
+                    <br>
                     <form action="index.php">
                         <div class="">
-                            <input type="text" class="inp" placeholder="جستجو">
+                            <label>موضوع پست</label>
+                            <input type="text" class="postinp" placeholder="موضوع پست">
                             <br>
-                            <button class="bttn" type="button">جستجو کن</button>
+                            <label>متن پست</label>
+                            <textarea type="text" class="postinp" rows="5" placeholder="متن پست"></textarea>
+                            <br>
+                            <button class="postbtn" type="button">پست کردن</button>
                         </div>
                     </form>
                 </div>
