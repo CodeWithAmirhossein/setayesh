@@ -33,8 +33,9 @@ if (isset($_POST["logging"])) {
             $result = mysqli_query($connection, $sql);
 
             if (mysqli_num_rows($result) == 1) {
+                $admin = mysqli_fetch_assoc($result);
                 $_SESSION['status'] = true;
-                $_SESSION['id'] = "admin";
+                $_SESSION['id'] = $admin['id'];
                 ?>
                 <script>
                     window.location.replace("../admin");
