@@ -20,7 +20,7 @@ $status = $_SESSION['status'];
 <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-custom fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../"><i class="fa fa-bank"></i> هنرستان آفرینش</a>
+            <a class="navbar-brand" href="."><i class="fa fa-bank"></i> هنرستان آفرینش</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -41,9 +41,18 @@ $status = $_SESSION['status'];
                 <div class="navbar-nav">
                     <?php
                     if ($status) {
-                        ?>
-                        <a class="nav-link active" href="../user"><i class="fa fa-dashboard"></i> ورود به پنل</a> <a class="nav-link active" href="account/logout.php"><i class="fa fa-sign-out"></i> خروج از حساب</a>
-                        <?php
+                        if ($_SESSION['person'] == "admin") {
+                            ?>
+                            <a class="nav-link active" href="../admin"><i class="fa fa-dashboard"></i> ورود به پنل</a>
+                            <a class="nav-link active" href="../account/logout.php"><i class="fa fa-sign-out"></i> خروج از حساب</a>
+                            <?php
+                        }
+                        else {
+                            ?>
+                            <a class="nav-link active" href="../student"><i class="fa fa-dashboard"></i> ورود به پنل</a>
+                            <a class="nav-link active" href="../account/logout.php"><i class="fa fa-sign-out"></i> خروج از حساب</a>
+                            <?php
+                        }
                     }
                     else {
                         ?>
