@@ -29,7 +29,7 @@ if (isset($_POST["newpost"])) {
     $text = $_POST['posttext'];
     $datetime = date("M d, Y H:i:s");;
 
-    $insert = "INSERT INTO posts (`title`, `txt`, `datetime`) VALUE ('$title', '$text', '$database')";
+    $insert = "INSERT INTO posts (`title`, `txt`, `datetime`) VALUE ('$title', '$text', '$datetime')";
     if (mysqli_query($connection, $insert)) {
         ?>
         <script>
@@ -53,7 +53,7 @@ if (isset($_POST["newnews"])) {
     $news = $_POST['newstext'];
     $datetime = date("M d, Y H:i:s");;
 
-    $insert = "INSERT INTO news (`title`, `news`, `datetime`) VALUE ('$title', '$news', '$database')";
+    $insert = "INSERT INTO news (`title`, `news`, `datetime`) VALUE ('$title', '$news', '$datetime')";
     if (mysqli_query($connection, $insert)) {
         ?>
         <script>
