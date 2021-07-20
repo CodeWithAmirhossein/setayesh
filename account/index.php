@@ -170,14 +170,7 @@ if (isset($_POST['registering'])) {
                                 </div>
                             </div>
                             <br>
-                            <div class="row">
-                                <div class="col">
-                                    <input type="text" name="phone" class="accountinp" placeholder="شماره همراه">
-                                </div>
-                                <div class="col">
-                                    <input type="text" name="email" class="accountinp" placeholder="ایمیل">
-                                </div>
-                            </div>
+                                <input type="text" name="email" class="accountinp" placeholder="ایمیل">
                             <br>
                             <div class="row">
                                 <div class="col">
