@@ -94,17 +94,17 @@ $newss = mysqli_query($connection, $getnews);
     <br>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-3">
                 <?php
                 if (mysqli_num_rows($newss) > 0) {
                     while ($news = mysqli_fetch_assoc($newss)) {
                         ?>
                         <div class="news">
                             <div class="newshead">
-                                <h3><?php echo $news["title"]; ?> <span style="float: left;"><?php echo $news["datetime"]; ?></span></h3>
+                                <p><b><?php echo $news["title"]; ?></b> <span style="float: left;"><?php echo $news["datetime"]; ?></span></p>
                             </div>
                             <div class="newsbody">
-                                <h4><?php echo $news["news"]; ?></h4>
+                                <p><?php echo $news["news"]; ?></p>
                             </div>
                         </div>
                         <br>
