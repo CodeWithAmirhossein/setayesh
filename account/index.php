@@ -57,7 +57,7 @@ if (isset($_POST["logging"])) {
                 $_SESSION['id'] = $user["id"];
                 ?>
                 <script>
-                    window.location.replace("../user");
+                    window.location.replace("../student");
                 </script>
                 <?php
             }
