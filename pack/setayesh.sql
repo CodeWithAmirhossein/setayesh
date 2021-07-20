@@ -38,8 +38,6 @@ CREATE TABLE `students`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_unicode_ci;
 
-INSERT INTO `students` (`email`, `password`, `id`, `name`) VALUES ('student@yahoo.com', 'student', '123456789', 'نام و نام خانوادگی');
-
 DROP TABLE IF EXISTS `admin`;
 CREATE TABLE `admin`
 (
@@ -54,4 +52,4 @@ CREATE TABLE `admin`
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_unicode_ci;
 
-INSERT INTO `admin` (`email`, `password`, `id`, `name`) VALUES ('admin@yahoo.com', 'admin', '123456789', 'نام و نام خانوادگی');
+INSERT INTO `admin` (`email`, `password`, `id`, `name`) VALUES ('admin@yahoo.com', 'admin', '123456789', 'مدیر مدیری');
